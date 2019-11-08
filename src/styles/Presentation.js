@@ -52,12 +52,51 @@ export const AboutMe = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px;
+  padding: 50px 20px 0px;
+  color: #fff;
 
   img {
     width: 85px;
     height: 85px;
     border-radius: 50%;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    color: #db718f;
+  }
+
+  h4 {
+    margin: 0;
+  }
+`;
+
+export const SocialSection = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+  p {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: rgba(17, 16, 34, 0.15) 0px 10px 34px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.7;
+    margin-right: 10px;
+
+    :hover {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    font-size: 20px;
+    color: #fff !important;
   }
 `;
 

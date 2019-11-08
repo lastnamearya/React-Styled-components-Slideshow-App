@@ -1,5 +1,6 @@
 import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
+import { FaHome, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import WelcomeSlide from './Welcome';
 import Logo from '../styles/images/logo.png';
@@ -10,6 +11,7 @@ import {
   ActiveSlideWrapper,
   SlidesNavigationSection,
   AboutMe,
+  SocialSection,
   SlidesWrapper,
   SlidesDiv,
   Slide,
@@ -56,6 +58,50 @@ const App = () => (
       <SlidesNavigationSection>
         <AboutMe>
           <img src={Profile} alt="lastnamearya" />
+          <h3>Jigyasu Arya</h3>
+          <h4>Self-taught Frontend Developer</h4>
+          <SocialSection>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://lastnamearya.github.io/"
+                style={{ textDecoration: 'none' }}
+              >
+                <FaHome />
+              </a>
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/lastnamearya/"
+                style={{ textDecoration: 'none' }}
+              >
+                <FaTwitter />
+              </a>
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/lastnamearya/"
+                style={{ textDecoration: 'none' }}
+              >
+                <FaGithub />
+              </a>
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/lastnamearya/"
+                style={{ textDecoration: 'none' }}
+              >
+                <FaLinkedinIn />
+              </a>
+            </p>
+          </SocialSection>
         </AboutMe>
         <SlidesWrapper>
           <SlidesDiv>
