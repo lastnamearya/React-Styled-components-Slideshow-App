@@ -1,11 +1,27 @@
 import styled from 'styled-components';
 
+export const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #logo {
+    width: 100px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  iframe {
+    margin-left: 70px;
+  }
+`;
+
 export const PresentationWrapper = styled.div`
   background: #fff;
   min-height: 78vh;
   max-height: auto;
   width: 90%;
-  margin: 5%;
+  margin: 40px 5% 100px;
   box-shadow: rgba(17, 16, 34, 0.4) 0px 12px 34px 1px;
   border-radius: 40px;
   display: flex;
