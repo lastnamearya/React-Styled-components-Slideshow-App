@@ -8,7 +8,7 @@ import Rikin from '../styles/images/rikin.png';
 import Karthik from '../styles/images/karthik.png';
 import Hasura from '../styles/images/hasura.png';
 
-import { WelcomeWrapper, TeamMember } from '../styles/Presentation';
+import { WelcomeWrapper, WelcomeDiv, TeamMember } from '../styles/Presentation';
 
 const teamData = [
   {
@@ -43,9 +43,23 @@ const teamData = [
 
 const WelcomeSlide = () => (
   <WelcomeWrapper>
-    {teamData.map(({ img, name }, index) => (
-      <TeamMember src={img} key={name} index={index} />
-    ))}
+    <h1>
+      Hello Everyone{' '}
+      <span role="img" aria-label="play">
+        👋
+      </span>
+    </h1>
+    <p>
+      Thanks for joining{' '}
+      <span role="img" aria-label="play">
+        🙌
+      </span>
+    </p>
+    <WelcomeDiv>
+      {teamData.map(({ img, name }, index) => (
+        <TeamMember src={img} key={name} index={index} />
+      ))}
+    </WelcomeDiv>
   </WelcomeWrapper>
 );
 

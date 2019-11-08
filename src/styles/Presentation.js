@@ -20,8 +20,8 @@ export const PresentationWrapper = styled.div`
   background: #fff;
   min-height: 78vh;
   max-height: auto;
-  width: 90%;
-  margin: 50px 5% 100px;
+  width: 85%;
+  margin: 50px 7.5% 100px;
   box-shadow: rgba(17, 16, 34, 0.4) 0px 12px 34px 1px;
   border-radius: 40px;
   display: flex;
@@ -30,7 +30,7 @@ export const PresentationWrapper = styled.div`
 `;
 
 export const ActiveSlideWrapper = styled.div`
-  margin: 50px 50px 100px;
+  margin: 50px 50px;
 `;
 
 export const SlidesNavigationSection = styled.div`
@@ -63,7 +63,7 @@ export const AboutMe = styled.div`
 
 export const SlidesWrapper = styled.div`
   overflow: auto;
-  margin-left: 400px;
+  margin-left: 300px;
 
   ::-webkit-scrollbar {
     height: 12px;
@@ -108,9 +108,22 @@ export const Slide = styled.div`
 // Welcome First Slide
 
 export const WelcomeWrapper = styled.div`
+  text-align: center;
+
+  h1 {
+    margin: 0px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+`;
+
+export const WelcomeDiv = styled.div`
   display: flex;
   justify-content: center;
   height: 300px;
+  margin-top: 50px;
 `;
 
 export const TeamMember = styled.img`
