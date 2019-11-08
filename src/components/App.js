@@ -1,11 +1,13 @@
 import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
 
-import Logo from '../styles/logo.png';
-import Profile from '../styles/profile.png';
+import WelcomeSlide from './Welcome';
+import Logo from '../styles/images/logo.png';
+import Profile from '../styles/images/profile.png';
 import {
   AppWrapper,
   PresentationWrapper,
+  ActiveSlideWrapper,
   SlidesNavigationSection,
   AboutMe,
   SlidesWrapper,
@@ -47,6 +49,10 @@ const App = () => (
     ></iframe>
     <PresentationWrapper>
       <GlobalStyles />
+      {/* Active Slide */}
+      <ActiveSlideWrapper>
+        <WelcomeSlide />
+      </ActiveSlideWrapper>
       <SlidesNavigationSection>
         <AboutMe>
           <img src={Profile} alt="lastnamearya" />

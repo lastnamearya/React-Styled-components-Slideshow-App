@@ -29,6 +29,10 @@ export const PresentationWrapper = styled.div`
   overflow-x: hidden;
 `;
 
+export const ActiveSlideWrapper = styled.div`
+  margin: 50px 50px 100px;
+`;
+
 export const SlidesNavigationSection = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -51,8 +55,8 @@ export const AboutMe = styled.div`
   padding: 50px;
 
   img {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
   }
 `;
@@ -98,5 +102,27 @@ export const Slide = styled.div`
     margin-right: -20px;
     margin-top: -30px;
     width: 320px;
+  }
+`;
+
+// Welcome First Slide
+
+export const WelcomeWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 300px;
+`;
+
+export const TeamMember = styled.img`
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+  align-self: ${({ index }) => (index % 2 === 0 ? 'flex-start' : 'flex-end')};
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+  :hover {
+    transform: scale(1.1);
   }
 `;
