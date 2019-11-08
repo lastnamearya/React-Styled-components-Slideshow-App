@@ -136,12 +136,29 @@ export const Slide = styled.div`
   background: #fff;
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+
+  h2 {
+    background: white;
+    margin: 0;
+    color: #545454;
+  }
 
   :hover {
     margin-right: -20px;
     margin-top: -30px;
     width: 320px;
   }
+`;
+
+export const FootPrint = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 `;
 
 // Welcome First Slide

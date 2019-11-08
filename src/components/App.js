@@ -11,6 +11,7 @@ import {
   ActiveSlideWrapper,
   SlidesNavigationSection,
   AboutMe,
+  FootPrint,
   SocialSection,
   SlidesWrapper,
   SlidesDiv,
@@ -38,6 +39,56 @@ const slidesData = [
   },
 ];
 
+const Lastnamearya = () => (
+  <AboutMe>
+    <img src={Profile} alt="lastnamearya" />
+    <h3>Jigyasu Arya</h3>
+    <h4>Self-taught Frontend Developer</h4>
+    <SocialSection>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://lastnamearya.github.io/"
+          style={{ textDecoration: 'none' }}
+        >
+          <FaHome />
+        </a>
+      </p>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/lastnamearya/"
+          style={{ textDecoration: 'none' }}
+        >
+          <FaTwitter />
+        </a>
+      </p>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/lastnamearya/"
+          style={{ textDecoration: 'none' }}
+        >
+          <FaGithub />
+        </a>
+      </p>
+      <p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/lastnamearya/"
+          style={{ textDecoration: 'none' }}
+        >
+          <FaLinkedinIn />
+        </a>
+      </p>
+    </SocialSection>
+  </AboutMe>
+);
+
 const App = () => (
   <AppWrapper>
     <img src={Logo} alt="styled-components" id="logo" />
@@ -56,57 +107,14 @@ const App = () => (
         <WelcomeSlide />
       </ActiveSlideWrapper>
       <SlidesNavigationSection>
-        <AboutMe>
-          <img src={Profile} alt="lastnamearya" />
-          <h3>Jigyasu Arya</h3>
-          <h4>Self-taught Frontend Developer</h4>
-          <SocialSection>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://lastnamearya.github.io/"
-                style={{ textDecoration: 'none' }}
-              >
-                <FaHome />
-              </a>
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/lastnamearya/"
-                style={{ textDecoration: 'none' }}
-              >
-                <FaTwitter />
-              </a>
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/lastnamearya/"
-                style={{ textDecoration: 'none' }}
-              >
-                <FaGithub />
-              </a>
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/lastnamearya/"
-                style={{ textDecoration: 'none' }}
-              >
-                <FaLinkedinIn />
-              </a>
-            </p>
-          </SocialSection>
-        </AboutMe>
+        <Lastnamearya />
         <SlidesWrapper>
           <SlidesDiv>
             {slidesData.map(({ slide }) => (
-              <Slide key={slide} />
+              <Slide key={slide}>
+                <h2>Slide</h2>
+                <FootPrint src={Profile} alt="lastnamearya" />
+              </Slide>
             ))}
           </SlidesDiv>
         </SlidesWrapper>
