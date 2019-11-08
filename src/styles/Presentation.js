@@ -44,6 +44,17 @@ export const AboutMe = styled.div`
   border-radius: 30px;
   position: absolute;
   background: linear-gradient(50deg, #ff9a93, #fad0c4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
 `;
 
 export const SlidesWrapper = styled.div`

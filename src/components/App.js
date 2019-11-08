@@ -2,6 +2,7 @@ import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
 
 import Logo from '../styles/logo.png';
+import Profile from '../styles/profile.png';
 import {
   AppWrapper,
   PresentationWrapper,
@@ -47,7 +48,9 @@ const App = () => (
     <PresentationWrapper>
       <GlobalStyles />
       <SlidesNavigationSection>
-        <AboutMe></AboutMe>
+        <AboutMe>
+          <img src={Profile} alt="lastnamearya" />
+        </AboutMe>
         <SlidesWrapper>
           <SlidesDiv>
             {slidesData.map(({ slide }) => (
