@@ -16,6 +16,18 @@ export const PresentationWrapper = styled.div`
 export const SlidesWrapper = styled.div`
   overflow: auto;
   margin-left: 100px;
+
+  ::-webkit-scrollbar {
+    height: 12px;
+    border-radius: 30px;
+    background-color: #fad0c4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cc6a87;
+    border-radius: 80px;
+    width: 300px;
+  }
 `;
 
 export const SlidesDiv = styled.div`
