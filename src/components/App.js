@@ -5,10 +5,33 @@ import Logo from '../styles/logo.png';
 import {
   AppWrapper,
   PresentationWrapper,
+  SlidesNavigationSection,
+  AboutMe,
   SlidesWrapper,
   SlidesDiv,
   Slide,
 } from '../styles/Presentation';
+
+const slidesData = [
+  {
+    slide: 1,
+  },
+  {
+    slide: 2,
+  },
+  {
+    slide: 3,
+  },
+  {
+    slide: 4,
+  },
+  {
+    slide: 5,
+  },
+  {
+    slide: 6,
+  },
+];
 
 const App = () => (
   <AppWrapper>
@@ -23,16 +46,16 @@ const App = () => (
     ></iframe>
     <PresentationWrapper>
       <GlobalStyles />
-      <SlidesWrapper>
-        <SlidesDiv>
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-          <Slide />
-        </SlidesDiv>
-      </SlidesWrapper>
+      <SlidesNavigationSection>
+        <AboutMe></AboutMe>
+        <SlidesWrapper>
+          <SlidesDiv>
+            {slidesData.map(({ slide }) => (
+              <Slide key={slide} />
+            ))}
+          </SlidesDiv>
+        </SlidesWrapper>
+      </SlidesNavigationSection>
     </PresentationWrapper>
   </AppWrapper>
 );
