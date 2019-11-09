@@ -27,18 +27,43 @@ const slidesData = [
   },
   {
     slide: 2,
+    topic: 'Styled-Components',
   },
   {
     slide: 3,
+    topic: 'How I started with CSS-in-Js',
   },
   {
     slide: 4,
+    topic: 'How Styled-Components Work',
   },
   {
     slide: 5,
+    topic: 'Theming in Styled-Components',
   },
   {
     slide: 6,
+    topic: 'Props: Writing Conditional-CSS',
+  },
+  {
+    slide: 7,
+    topic: 'Extensible Systems',
+  },
+  {
+    slide: 8,
+    topic: 'Global Styles',
+  },
+  {
+    slide: 9,
+    topic: 'Other Alternatives',
+  },
+  {
+    slide: 10,
+    topic: 'Developer Experience',
+  },
+  {
+    slide: 11,
+    topic: 'Thanks you Tanmai',
   },
 ];
 

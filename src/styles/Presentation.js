@@ -123,7 +123,7 @@ export const SlidesWrapper = styled.div`
 export const SlidesDiv = styled.div`
   display: flex;
   margin-top: 60px;
-  min-width: 1500px;
+  min-width: 2300px;
   max-width: auto;
   height: auto;
   padding: 2rem;
@@ -191,14 +191,14 @@ export const SlideTopic = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin-top: -50px;
+  margin-top: -60px;
   padding-right: 40px;
 
   h2 {
     color: #cc6a87;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   img {
