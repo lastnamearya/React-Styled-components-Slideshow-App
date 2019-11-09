@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
-import { FaHome, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaHome, FaReact, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import { StoreProvider, StoreConsumer } from '../store';
 import WelcomeSlide from './Welcome';
@@ -10,6 +10,7 @@ import {
   AppWrapper,
   PresentationWrapper,
   ActiveSlideWrapper,
+  ActiveSlideDiv,
   SlidesNavigationSection,
   AboutMe,
   FootPrint,
@@ -20,58 +21,63 @@ import {
   SlideTopic,
 } from '../styles/Presentation';
 
-const slidesData = [
+// ********************************************* //
+
+const slidesNavigationData = [
   {
-    slide: 1,
+    slide: 0,
     topic: 'Introduction to CSS-in-Js',
   },
   {
-    slide: 2,
+    slide: 1,
     topic: 'Styled-Components',
   },
   {
-    slide: 3,
-    topic: 'How I started with CSS-in-Js',
+    slide: 2,
+    topic: 'My experience with CSS-in-Js',
   },
   {
-    slide: 4,
+    slide: 3,
     topic: 'How Styled-Components Work',
   },
   {
-    slide: 5,
+    slide: 4,
     topic: 'Theming in Styled-Components',
   },
   {
-    slide: 6,
+    slide: 5,
     topic: 'Props: Writing Conditional-CSS',
   },
   {
-    slide: 7,
+    slide: 6,
     topic: 'Extensible Systems',
   },
   {
-    slide: 8,
+    slide: 7,
     topic: 'Global Styles',
   },
   {
-    slide: 9,
+    slide: 8,
     topic: 'Other Alternatives',
   },
   {
-    slide: 10,
+    slide: 9,
     topic: 'Developer Experience',
   },
   {
-    slide: 11,
-    topic: 'Thanks you Tanmai',
+    slide: 10,
+    topic: 'Thank you Tanmai',
   },
 ];
+
+// ********************************************* //
 
 const Lastnamearya = () => (
   <AboutMe>
     <img src={Profile} alt="lastnamearya" />
     <h3>Jigyasu Arya</h3>
     <h4>Self-taught Frontend | React.js Developer</h4>
+    <FaReact id="react" />
     <SocialSection>
       <p>
         <a
@@ -117,6 +123,74 @@ const Lastnamearya = () => (
   </AboutMe>
 );
 
+// ********************************************* //
+
+const mainSlidesData = [
+  {
+    topic: 'Introduction to CSS-in-Js',
+    id: 0,
+  },
+  {
+    topic: 'Styled-Components',
+    id: 1,
+  },
+  {
+    topic: 'How I started with Styled-Components',
+    id: 2,
+  },
+  {
+    topic: 'How Styled-Components works behind the scenes',
+    id: 3,
+  },
+  {
+    topic: 'Theming: Creating Themes in Styled-Components',
+    id: 4,
+  },
+  {
+    topic: 'Props: The real power of Styled-Components',
+    id: 5,
+  },
+  {
+    topic: 'Extensible Styling Systems',
+    id: 6,
+  },
+  {
+    topic: 'Helpers in Styled-Components: Global Styles',
+    id: 7,
+  },
+  {
+    topic: 'CSS-in-Js: Other Alternatives',
+    id: 8,
+  },
+  {
+    topic: "It's all about Developer Experience",
+    id: 9,
+  },
+  {
+    topic: 'Thank you Hasura Team',
+    id: 10,
+  },
+];
+
+const CurrentActiveSlide = ({ currentActiveSlide }) => {
+  return (
+    <React.Fragment>
+      {mainSlidesData
+        .filter(({ id }) => {
+          return id === currentActiveSlide;
+        })
+        .map(({ topic, id, description }) => (
+          <ActiveSlideDiv key={id}>
+            <h1>{topic}</h1>
+            <p>{description}</p>
+          </ActiveSlideDiv>
+        ))}
+    </React.Fragment>
+  );
+};
+
+// ********************************************* //
+
 const App = () => (
   <StoreProvider>
     <StoreConsumer>
@@ -134,12 +208,18 @@ const App = () => (
           <PresentationWrapper>
             <GlobalStyles />
             {/* Active Slide */}
-            <ActiveSlideWrapper>{isWelcomeSlideActive && <WelcomeSlide />}</ActiveSlideWrapper>
+            <ActiveSlideWrapper>
+              {isWelcomeSlideActive ? (
+                <WelcomeSlide />
+              ) : (
+                <CurrentActiveSlide currentActiveSlide={currentActiveSlide} />
+              )}
+            </ActiveSlideWrapper>
             <SlidesNavigationSection>
               <Lastnamearya />
               <SlidesWrapper>
                 <SlidesDiv>
-                  {slidesData.map(({ slide, topic }, index) => (
+                  {slidesNavigationData.map(({ slide, topic }, index) => (
                     <Slide
                       key={slide}
                       active={index === currentActiveSlide && true}

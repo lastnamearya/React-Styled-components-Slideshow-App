@@ -29,10 +29,6 @@ export const PresentationWrapper = styled.div`
   overflow-x: hidden;
 `;
 
-export const ActiveSlideWrapper = styled.div`
-  margin: 50px 50px;
-`;
-
 export const SlidesNavigationSection = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -72,13 +68,18 @@ export const AboutMe = styled.div`
     margin: 0;
     line-height: 22px;
   }
+
+  #react {
+    font-size: 30px;
+    margin-top: 10px;
+  }
 `;
 
 export const SocialSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 70px;
 
   p {
     width: 40px;
@@ -192,13 +193,15 @@ export const SlideTopic = styled.div`
   align-items: flex-start;
   text-align: left;
   margin-top: -60px;
-  padding-right: 40px;
+  padding-right: 50px;
 
   h2 {
     color: #cc6a87;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 25px;
+    width: 200px;
+    height: auto;
   }
 
   img {
@@ -251,4 +254,22 @@ export const TeamMember = styled.img`
 
 // *************************************************** //
 
-// Active Slide ~ Showcase
+// Active Slide
+
+export const ActiveSlideWrapper = styled.div`
+  margin: 50px 50px;
+  min-height: 430px;
+  max-height: auto;
+`;
+
+export const ActiveSlideDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    ${'' /* text-align: center; */}
+    border-bottom: 3.5px solid #cc6a87;
+    padding: 0 12px 5px;
+  }
+`;

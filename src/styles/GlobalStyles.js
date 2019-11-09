@@ -15,6 +15,13 @@ const GlobalStyles = createGlobalStyle`
   *:after {
     box-sizing: inherit;
   }
+
+  h1 {
+    color: rgb(243, 182, 97);
+    font-size: 2.33333rem;
+    font-weight: bold;
+    font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
   
  }
 
