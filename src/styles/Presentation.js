@@ -144,7 +144,6 @@ export const Slide = styled.div`
   padding: 30px 30px 25px;
 
   h2 {
-    background: white;
     margin: 0;
     color: #545454;
   }
@@ -163,7 +162,11 @@ export const Slide = styled.div`
       margin-right: -40px;
       margin-top: -30px;
       width: 320px;
-      border: 8px solid #fce2db;
+      background: linear-gradient(50deg, #ff9a93, #fad0c4);
+
+      h2 {
+        color: white;
+      }
     `};
 
   footer {
