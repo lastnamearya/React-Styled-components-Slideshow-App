@@ -17,6 +17,7 @@ import {
   SlidesWrapper,
   SlidesDiv,
   Slide,
+  SlideTopic,
 } from '../styles/Presentation';
 
 const slidesData = [
@@ -44,7 +45,7 @@ const Lastnamearya = () => (
   <AboutMe>
     <img src={Profile} alt="lastnamearya" />
     <h3>Jigyasu Arya</h3>
-    <h4>Self-taught Frontend Developer</h4>
+    <h4>Self-taught Frontend | React.js Developer</h4>
     <SocialSection>
       <p>
         <a
@@ -120,7 +121,10 @@ const App = () => (
                       active={index === currentActiveSlide && true}
                       onClick={() => changeCurrentActiveSlide(index)}
                     >
-                      <h2>Slide</h2>
+                      <h2>{`${index + 1}. Slide`}</h2>
+                      <SlideTopic>
+                        <img src={Logo} alt="styled-components" />
+                      </SlideTopic>
                       <footer>
                         <FootPrint src={Profile} alt="lastnamearya" />
                         <p>1x Developer</p>

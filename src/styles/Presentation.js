@@ -54,6 +54,7 @@ export const AboutMe = styled.div`
   align-items: center;
   padding: 50px 20px 0px;
   color: #fff;
+  text-align: center;
 
   img {
     width: 85px;
@@ -69,6 +70,7 @@ export const AboutMe = styled.div`
 
   h4 {
     margin: 0;
+    line-height: 22px;
   }
 `;
 
@@ -146,6 +148,7 @@ export const Slide = styled.div`
   h2 {
     margin: 0;
     color: #545454;
+    font-weight: 600;
   }
 
   :hover {
@@ -164,8 +167,9 @@ export const Slide = styled.div`
       width: 320px;
       background: linear-gradient(50deg, #ff9a93, #fad0c4);
 
-      h2 {
-        color: white;
+      h2,
+      p {
+        color: #fff !important;
       }
     `};
 
@@ -173,6 +177,17 @@ export const Slide = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+`;
+
+export const SlideTopic = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
+
+  img {
+    width: 90px;
   }
 `;
 
