@@ -120,7 +120,7 @@ const Lastnamearya = () => (
 const App = () => (
   <StoreProvider>
     <StoreConsumer>
-      {({ currentActiveSlide, changeCurrentActiveSlide }) => (
+      {({ isWelcomeSlideActive, currentActiveSlide, changeCurrentActiveSlide }) => (
         <AppWrapper>
           <img src={Logo} alt="styled-components" id="logo" />
           <iframe
@@ -134,9 +134,7 @@ const App = () => (
           <PresentationWrapper>
             <GlobalStyles />
             {/* Active Slide */}
-            <ActiveSlideWrapper>
-              <WelcomeSlide />
-            </ActiveSlideWrapper>
+            <ActiveSlideWrapper>{isWelcomeSlideActive && <WelcomeSlide />}</ActiveSlideWrapper>
             <SlidesNavigationSection>
               <Lastnamearya />
               <SlidesWrapper>

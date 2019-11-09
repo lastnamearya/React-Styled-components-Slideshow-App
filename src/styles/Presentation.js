@@ -248,3 +248,7 @@ export const TeamMember = styled.img`
     transform: scale(1.1);
   }
 `;
+
+// *************************************************** //
+
+// Active Slide ~ Showcase

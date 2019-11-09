@@ -8,10 +8,12 @@ const { Provider, Consumer } = React.createContext();
 
 class StoreProvider extends React.Component {
   state = {
+    isWelcomeSlideActive: true,
     currentActiveSlide: undefined,
   };
 
-  changeCurrentActiveSlide = slideIndex => this.setState({ currentActiveSlide: slideIndex });
+  changeCurrentActiveSlide = slideIndex =>
+    this.setState({ currentActiveSlide: slideIndex, isWelcomeSlideActive: false });
 
   // ******************************************** //
 
