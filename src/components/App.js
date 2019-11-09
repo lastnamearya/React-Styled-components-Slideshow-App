@@ -23,6 +23,7 @@ import {
 const slidesData = [
   {
     slide: 1,
+    topic: 'Introduction to CSS-in-Js',
   },
   {
     slide: 2,
@@ -115,14 +116,15 @@ const App = () => (
               <Lastnamearya />
               <SlidesWrapper>
                 <SlidesDiv>
-                  {slidesData.map(({ slide }, index) => (
+                  {slidesData.map(({ slide, topic }, index) => (
                     <Slide
                       key={slide}
                       active={index === currentActiveSlide && true}
                       onClick={() => changeCurrentActiveSlide(index)}
                     >
-                      <h2>{`${index + 1}. Slide`}</h2>
+                      <p>{`${index + 1}. Slide`}</p>
                       <SlideTopic>
+                        <h2>{topic}</h2>
                         <img src={Logo} alt="styled-components" />
                       </SlideTopic>
                       <footer>

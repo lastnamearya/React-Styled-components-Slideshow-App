@@ -145,14 +145,16 @@ export const Slide = styled.div`
   align-items: flex-start;
   padding: 30px 30px 25px;
 
-  h2 {
+  p {
     margin: 0;
-    color: #545454;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #6e6e6e;
   }
 
   :hover {
-    margin-right: -20px;
+    margin-right: -40px;
     margin-top: -30px;
     width: 320px;
   }
@@ -167,7 +169,6 @@ export const Slide = styled.div`
       width: 320px;
       background: linear-gradient(50deg, #ff9a93, #fad0c4);
 
-      h2,
       p {
         color: #fff !important;
       }
@@ -177,17 +178,32 @@ export const Slide = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    p {
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+    }
   }
 `;
 
 export const SlideTopic = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: 80px;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: -50px;
+  padding-right: 40px;
+
+  h2 {
+    color: #cc6a87;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
   img {
     width: 90px;
+    margin-left: 80px;
   }
 `;
 
