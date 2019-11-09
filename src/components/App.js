@@ -2,6 +2,7 @@ import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
 import { FaHome, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
+import { StoreProvider, StoreConsumer } from '../store';
 import WelcomeSlide from './Welcome';
 import Logo from '../styles/images/logo.png';
 import Profile from '../styles/images/profile.png';
@@ -90,37 +91,50 @@ const Lastnamearya = () => (
 );
 
 const App = () => (
-  <AppWrapper>
-    <img src={Logo} alt="styled-components" id="logo" />
-    <iframe
-      src="https://ghbtns.com/github-btn.html?user=styled-components&repo=styled-components&type=star&count=true"
-      frameBorder="0"
-      scrolling="0"
-      width="170px"
-      height="20px"
-      title="styled-components"
-    ></iframe>
-    <PresentationWrapper>
-      <GlobalStyles />
-      {/* Active Slide */}
-      <ActiveSlideWrapper>
-        <WelcomeSlide />
-      </ActiveSlideWrapper>
-      <SlidesNavigationSection>
-        <Lastnamearya />
-        <SlidesWrapper>
-          <SlidesDiv>
-            {slidesData.map(({ slide }) => (
-              <Slide key={slide}>
-                <h2>Slide</h2>
-                <FootPrint src={Profile} alt="lastnamearya" />
-              </Slide>
-            ))}
-          </SlidesDiv>
-        </SlidesWrapper>
-      </SlidesNavigationSection>
-    </PresentationWrapper>
-  </AppWrapper>
+  <StoreProvider>
+    <StoreConsumer>
+      {({ currentActiveSlide, changeCurrentActiveSlide }) => (
+        <AppWrapper>
+          <img src={Logo} alt="styled-components" id="logo" />
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=styled-components&repo=styled-components&type=star&count=true"
+            frameBorder="0"
+            scrolling="0"
+            width="170px"
+            height="20px"
+            title="styled-components"
+          ></iframe>
+          <PresentationWrapper>
+            <GlobalStyles />
+            {/* Active Slide */}
+            <ActiveSlideWrapper>
+              <WelcomeSlide />
+            </ActiveSlideWrapper>
+            <SlidesNavigationSection>
+              <Lastnamearya />
+              <SlidesWrapper>
+                <SlidesDiv>
+                  {slidesData.map(({ slide }, index) => (
+                    <Slide
+                      key={slide}
+                      active={index === currentActiveSlide && true}
+                      onClick={() => changeCurrentActiveSlide(index)}
+                    >
+                      <h2>Slide</h2>
+                      <footer>
+                        <FootPrint src={Profile} alt="lastnamearya" />
+                        <p>1x Developer</p>
+                      </footer>
+                    </Slide>
+                  ))}
+                </SlidesDiv>
+              </SlidesWrapper>
+            </SlidesNavigationSection>
+          </PresentationWrapper>
+        </AppWrapper>
+      )}
+    </StoreConsumer>
+  </StoreProvider>
 );
 
 export default App;

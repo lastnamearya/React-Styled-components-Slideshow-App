@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const AppWrapper = styled.div`
   display: flex;
@@ -59,6 +59,7 @@ export const AboutMe = styled.div`
     width: 85px;
     height: 85px;
     border-radius: 50%;
+    box-shadow: rgba(17, 16, 34, 0.2) 0px 12px 34px 1px;
   }
 
   h3 {
@@ -140,7 +141,7 @@ export const Slide = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 30px;
+  padding: 30px 30px 25px;
 
   h2 {
     background: white;
@@ -153,12 +154,30 @@ export const Slide = styled.div`
     margin-top: -30px;
     width: 320px;
   }
+
+  ${'' /* Active Slide */}
+
+  ${({ active }) =>
+    active &&
+    css`
+      margin-right: -40px;
+      margin-top: -30px;
+      width: 320px;
+      border: 8px solid #fce2db;
+    `};
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
 export const FootPrint = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
+  margin-right: 8px;
 `;
 
 // Welcome First Slide
