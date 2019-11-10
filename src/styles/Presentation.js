@@ -278,11 +278,23 @@ export const ActiveSlideDiv = styled.div`
   }
 `;
 
+export const SlideContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    margin: 12px 0px;
+  }
+`;
+
 // Images embedded in Slides
 
 export const SlideImage = styled.img`
-  margin-top: 10px;
+  margin: 10px 0px;
   border: 6px solid #fff;
   box-shadow: rgba(20, 20, 20, 0.27) 1px 1px 20px;
+
   border-radius: ${({ rounded }) => rounded && '13px'};
 `;

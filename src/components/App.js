@@ -68,7 +68,7 @@ const slidesNavigationData = [
   },
   {
     slide: 10,
-    topic: 'Thank you Tanmai :)',
+    topic: 'Thank you Tanmai 👹',
   },
 ];
 
