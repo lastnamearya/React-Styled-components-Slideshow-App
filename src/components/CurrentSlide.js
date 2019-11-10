@@ -112,8 +112,15 @@ const Experience = () => (
 
 const Overview = () => (
   <SlideContent>
+    <h2>One of the most popular CSS-in-Js Libarary</h2>
     <SlideImage src={stats} alt="Install" rounded />
-    <p>Easier to install with no dev setup</p>
+    <ul style={{ marginTop: '1.5rem' }}>
+      <li>Easier to install with no dev setup</li>
+      <li>Babel Plugin to Support SSR, Smaller Bundles etc</li>
+      <li>Theming Support</li>
+      <li>Supports writing CSS in Styled Component</li>
+      <li>Easier Learning Curve</li>
+    </ul>
     <SlideImage src={install} alt="Install" />
   </SlideContent>
 );
