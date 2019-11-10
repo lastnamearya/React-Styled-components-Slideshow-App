@@ -284,6 +284,22 @@ export const SlideContent = styled.div`
   justify-content: flex-start;
   align-items: center;
 
+  h2 {
+    margin: 1rem 0;
+    color: #cc6a87;
+    font-size: 2rem;
+    letter-spacing: -0.75px;
+  }
+
+  ul {
+    margin: 0.5rem 0 1.5rem -2rem;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+  }
+
   p {
     margin: 12px 0px;
   }

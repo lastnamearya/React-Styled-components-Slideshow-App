@@ -17,13 +17,21 @@ const Test = () => <p>Test</p>;
 
 const Experience = () => (
   <SlideContent>
+    <h2>Major Product Requirements</h2>
+    <ul>
+      <li>Styles Abstraction for White Label & Default Version</li>
+      <li>Next.js ~ Server Side Rendering</li>
+    </ul>
     <SlideImage src={experience} alt="My Experience" />
     <p>
-      I shared my experience of using Styled-Components with my teammates in Slack right just after
-      first two weeks{' '}
+      Me right after two weeks of working with Styled-Components ~ Sharing my experience with my
+      teammates in Slack{' '}
       <span role="img" aria-label="play">
         😀
       </span>
+    </p>
+    <p style={{ marginTop: '0' }}>
+      Ignore null (ternary operator) in the above code snippet btw :P
     </p>
   </SlideContent>
 );
@@ -172,10 +180,9 @@ const CurrentSlide = ({ currentActiveSlide }) => {
         .filter(({ id }) => {
           return id === currentActiveSlide;
         })
-        .map(({ topic, id, description, componentName }) => (
+        .map(({ topic, id, componentName }) => (
           <ActiveSlideDiv key={id}>
             <h1>{topic}</h1>
-            <p>{description}</p>
             <ActiveSlide componentName={componentName} />
           </ActiveSlideDiv>
         ))}
