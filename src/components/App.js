@@ -4,13 +4,13 @@ import { FaHome, FaReact, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/
 
 import { StoreProvider, StoreConsumer } from '../store';
 import WelcomeSlide from './Welcome';
+import CurrentSlide from './CurrentSlide';
 import Logo from '../styles/images/logo.png';
 import Profile from '../styles/images/profile.png';
 import {
   AppWrapper,
   PresentationWrapper,
   ActiveSlideWrapper,
-  ActiveSlideDiv,
   SlidesNavigationSection,
   AboutMe,
   FootPrint,
@@ -22,6 +22,8 @@ import {
 } from '../styles/Presentation';
 
 // ********************************************* //
+
+// Slides Navigation Data
 
 const slidesNavigationData = [
   {
@@ -125,70 +127,6 @@ const Lastnamearya = () => (
 
 // ********************************************* //
 
-const mainSlidesData = [
-  {
-    topic: 'Introduction to CSS-in-Js',
-    id: 0,
-  },
-  {
-    topic: 'Styled-Components',
-    id: 1,
-  },
-  {
-    topic: 'How I started with Styled-Components',
-    id: 2,
-  },
-  {
-    topic: 'How Styled-Components works behind the scenes',
-    id: 3,
-  },
-  {
-    topic: 'Theming: Creating Themes in Styled-Components',
-    id: 4,
-  },
-  {
-    topic: 'Props: The real power of Styled-Components',
-    id: 5,
-  },
-  {
-    topic: 'Extensible Styling Systems',
-    id: 6,
-  },
-  {
-    topic: 'Helpers in Styled-Components: Global Styles',
-    id: 7,
-  },
-  {
-    topic: 'CSS-in-Js: Other Alternatives',
-    id: 8,
-  },
-  {
-    topic: "It's all about Developer Experience",
-    id: 9,
-  },
-  {
-    topic: 'Thank you Hasura Team',
-    id: 10,
-  },
-];
-
-const CurrentActiveSlide = ({ currentActiveSlide }) => {
-  return (
-    <React.Fragment>
-      {mainSlidesData
-        .filter(({ id }) => {
-          return id === currentActiveSlide;
-        })
-        .map(({ topic, id, description }) => (
-          <ActiveSlideDiv key={id}>
-            <h1>{topic}</h1>
-            <p>{description}</p>
-          </ActiveSlideDiv>
-        ))}
-    </React.Fragment>
-  );
-};
-
 // ********************************************* //
 
 const App = () => (
@@ -212,7 +150,7 @@ const App = () => (
               {isWelcomeSlideActive ? (
                 <WelcomeSlide />
               ) : (
-                <CurrentActiveSlide currentActiveSlide={currentActiveSlide} />
+                <CurrentSlide currentActiveSlide={currentActiveSlide} />
               )}
             </ActiveSlideWrapper>
             <SlidesNavigationSection>
