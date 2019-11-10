@@ -23,6 +23,66 @@ import whiteThree from '../assets/images/theme/white3.png';
 
 // ********************************************* //
 
+const mainSlidesData = [
+  {
+    topic: 'Introduction to CSS-in-Js',
+    id: 0,
+    componentName: 'example',
+  },
+  {
+    topic: 'How I started with Styled-Components',
+    id: 1,
+    componentName: 'experience',
+  },
+  {
+    topic: 'Styled-Components',
+    id: 2,
+    componentName: 'overview',
+  },
+  {
+    topic: 'How Styled-Components works behind the scenes',
+    id: 3,
+    componentName: 'example',
+  },
+  {
+    topic: 'Theming: Creating Themes with Styled-Components',
+    id: 4,
+    componentName: 'theming',
+  },
+  {
+    topic: 'Props: The real power of Styled-Components',
+    id: 5,
+    componentName: 'example',
+  },
+  {
+    topic: 'Extensible Styling Systems: Extending Styles',
+    id: 6,
+    componentName: 'example',
+  },
+  {
+    topic: 'Helpers in Styled-Components: Global Styles',
+    id: 7,
+    componentName: 'example',
+  },
+  {
+    topic: 'CSS-in-Js: Other Libraries',
+    id: 8,
+    componentName: 'other',
+  },
+  {
+    topic: "It's all about Developer Experience",
+    id: 9,
+    componentName: 'developerExperience',
+  },
+  {
+    topic: 'Thank you Hasura Team 🙌',
+    id: 10,
+    componentName: 'lastSlide',
+  },
+];
+
+// ********************************************* //
+
 const Test = () => <p>Test</p>;
 
 // 2. My Personal Experiece
@@ -131,73 +191,13 @@ const LastSlide = () => (
   <SlideContent>
     <SlideImage src={tweet} alt="Sahil Lavinga" rounded />
     <p>
-      Also I want to thank Kamlesh Chandnani for this project ~{'  '}
+      Also I want to thank Kamlesh Chandnani for his project ~{'  '}
       <a href="https://awesomeinterviewprocess.tech/" target="_blank" rel="noopener noreferrer">
         Awesome Interview Process
       </a>
     </p>
   </SlideContent>
 );
-
-// ********************************************* //
-
-const mainSlidesData = [
-  {
-    topic: 'Introduction to CSS-in-Js',
-    id: 0,
-    componentName: 'example',
-  },
-  {
-    topic: 'How I started with Styled-Components',
-    id: 1,
-    componentName: 'experience',
-  },
-  {
-    topic: 'Styled-Components',
-    id: 2,
-    componentName: 'overview',
-  },
-  {
-    topic: 'How Styled-Components works behind the scenes',
-    id: 3,
-    componentName: 'example',
-  },
-  {
-    topic: 'Theming: Creating Themes with Styled-Components',
-    id: 4,
-    componentName: 'theming',
-  },
-  {
-    topic: 'Props: The real power of Styled-Components',
-    id: 5,
-    componentName: 'example',
-  },
-  {
-    topic: 'Extensible Styling Systems: Extending Styles',
-    id: 6,
-    componentName: 'example',
-  },
-  {
-    topic: 'Helpers in Styled-Components: Global Styles',
-    id: 7,
-    componentName: 'example',
-  },
-  {
-    topic: 'CSS-in-Js: Other Libraries',
-    id: 8,
-    componentName: 'other',
-  },
-  {
-    topic: "It's all about Developer Experience",
-    id: 9,
-    componentName: 'developerExperience',
-  },
-  {
-    topic: 'Thank you Hasura Team 🙌',
-    id: 10,
-    componentName: 'lastSlide',
-  },
-];
 
 // ********************************************* //
 

@@ -173,7 +173,7 @@ const App = () => (
                       </SlideTopic>
                       <footer>
                         <FootPrint src={Profile} alt="lastnamearya" />
-                        <p>1x Developer</p>
+                        <p>lastnamearya</p>
                       </footer>
                     </Slide>
                   ))}

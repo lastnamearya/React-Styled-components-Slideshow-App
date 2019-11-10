@@ -188,6 +188,7 @@ export const Slide = styled.div`
     p {
       font-size: 1rem !important;
       font-weight: 500 !important;
+      letter-spacing: 0.5px;
     }
   }
 `;
