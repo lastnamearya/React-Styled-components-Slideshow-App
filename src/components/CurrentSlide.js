@@ -3,6 +3,10 @@ import React from 'react';
 import { ActiveSlideDiv, SlideImage } from '../styles/Presentation';
 import tweet from '../assets/images/sahil.png';
 import experience from '../assets/images/experience.png';
+// import install from '../assets/images/sc1.png';
+import stats from '../assets/images/stats.png';
+import otherLibraries from '../assets/images/otherLib.png';
+import sid from '../assets/images/sid.png';
 
 // ********************************************* //
 
@@ -11,6 +15,18 @@ const Test = () => <p>Test</p>;
 // 2. My Experiece Slide
 
 const Experience = () => <SlideImage src={experience} alt="My Experience" />;
+
+// 3. Styled Components Overview
+
+const Overview = () => <SlideImage src={stats} alt="Install" rounded />;
+
+// 9. Other Libraries
+
+const OtherLibraries = () => <SlideImage src={otherLibraries} alt="Other Libraries" />;
+
+// 10. Developer Experience
+
+const DeveloperExperience = () => <SlideImage src={sid} alt="Sid" />;
 
 // 11. Last Slide
 
@@ -32,7 +48,7 @@ const mainSlidesData = [
   {
     topic: 'Styled-Components',
     id: 2,
-    componentName: 'example',
+    componentName: 'overview',
   },
   {
     topic: 'How Styled-Components works behind the scenes',
@@ -60,14 +76,14 @@ const mainSlidesData = [
     componentName: 'example',
   },
   {
-    topic: 'CSS-in-Js: Other Alternatives',
+    topic: 'CSS-in-Js: Other Libraries',
     id: 8,
-    componentName: 'example',
+    componentName: 'other',
   },
   {
     topic: "It's all about Developer Experience",
     id: 9,
-    componentName: 'example',
+    componentName: 'developerExperience',
   },
   {
     topic: 'Thank you Hasura Team',
@@ -82,6 +98,9 @@ const ActiveSlide = ({ componentName }) => {
   const components = {
     example: Test,
     experience: Experience,
+    overview: Overview,
+    other: OtherLibraries,
+    developerExperience: DeveloperExperience,
     lastSlide: LastSlide,
   };
 
