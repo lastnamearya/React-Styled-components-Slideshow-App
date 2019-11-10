@@ -313,4 +313,5 @@ export const SlideImage = styled.img`
   box-shadow: rgba(20, 20, 20, 0.27) 1px 1px 20px;
 
   border-radius: ${({ rounded }) => rounded && '13px'};
+  width: ${props => props.width};
 `;

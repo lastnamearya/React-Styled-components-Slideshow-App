@@ -9,6 +9,18 @@ import fb from '../assets/images/fb.png';
 import otherLibraries from '../assets/images/otherLib.png';
 import sid from '../assets/images/sid.png';
 
+// Theme Images
+
+import theme from '../assets/images/theme/theme.png';
+import outsideComponent from '../assets/images/theme/outside.png';
+import themeObject from '../assets/images/theme/themeObject.png';
+import defaultThemeOne from '../assets/images/theme/default1.png';
+import defaultThemeTwo from '../assets/images/theme/default2.png';
+import defaultThemeThree from '../assets/images/theme/default3.png';
+import whiteOne from '../assets/images/theme/white1.png';
+import whiteTwo from '../assets/images/theme/white2.png';
+import whiteThree from '../assets/images/theme/white3.png';
+
 // ********************************************* //
 
 const Test = () => <p>Test</p>;
@@ -46,6 +58,39 @@ const Overview = () => (
   </SlideContent>
 );
 
+// 5. Theming in Styled-Components
+
+const Theming = () => (
+  <SlideContent>
+    <h2>Dark Theme Example: React Tic-Tac-Toe</h2>
+    <p>
+      Game Link ~{' '}
+      <a
+        href="https://lastnamearya-hasura-tic-tac-toe.netlify.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://lastnamearya-hasura-tic-tac-toe.netlify.com/
+      </a>
+    </p>
+    <SlideImage src={theme} alt="img" />
+    <p>{`<ThemeProvider> wrapper component`}</p>
+    <SlideImage src={outsideComponent} alt="img" />
+    <p>Use case: For example abstracting network loader color with theme</p>
+    <h2>Theme Object</h2>
+    <SlideImage src={themeObject} alt="img" />
+    <p>{`We have to explicity pass a theme object as a theme prop to the <ThemeProvider />  `}</p>
+    <h2>Default Theme of our Dashboard</h2>
+    <SlideImage src={defaultThemeOne} alt="img" width="60%" />
+    <SlideImage src={defaultThemeTwo} alt="img" width="60%" />
+    <SlideImage src={defaultThemeThree} alt="img" width="60%" />
+    <h2>WhiteLabel version Theme</h2>
+    <SlideImage src={whiteOne} alt="img" width="60%" />
+    <SlideImage src={whiteTwo} alt="img" width="60%" />
+    <SlideImage src={whiteThree} alt="img" width="60%" />
+  </SlideContent>
+);
+
 // 9. Other Libraries
 
 const OtherLibraries = () => (
@@ -75,7 +120,7 @@ const OtherLibraries = () => (
 
 const DeveloperExperience = () => (
   <SlideContent>
-    <SlideImage src={sid} alt="Sid" />
+    <SlideImage src={sid} alt="Sid" rounded />
     <p>A new trick that I recenlty learned by Sid</p>
   </SlideContent>
 );
@@ -118,9 +163,9 @@ const mainSlidesData = [
     componentName: 'example',
   },
   {
-    topic: 'Theming: Creating Themes in Styled-Components',
+    topic: 'Theming: Creating Themes with Styled-Components',
     id: 4,
-    componentName: 'example',
+    componentName: 'theming',
   },
   {
     topic: 'Props: The real power of Styled-Components',
@@ -161,6 +206,7 @@ const ActiveSlide = ({ componentName }) => {
     example: Test,
     experience: Experience,
     overview: Overview,
+    theming: Theming,
     other: OtherLibraries,
     developerExperience: DeveloperExperience,
     lastSlide: LastSlide,

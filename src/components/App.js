@@ -161,7 +161,10 @@ const App = () => (
                     <Slide
                       key={slide}
                       active={index === currentActiveSlide && true}
-                      onClick={() => changeCurrentActiveSlide(index)}
+                      onClick={() => {
+                        window.scrollTo({ top: 200, behavior: 'smooth' });
+                        changeCurrentActiveSlide(index);
+                      }}
                     >
                       <p>{`${index + 1}. Slide`}</p>
                       <SlideTopic>
