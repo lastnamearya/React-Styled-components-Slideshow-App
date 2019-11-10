@@ -3,10 +3,10 @@ import GlobalStyles from '../styles/GlobalStyles';
 import { FaHome, FaReact, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 import { StoreProvider, StoreConsumer } from '../store';
-import WelcomeSlide from './Welcome';
+import WelcomeSlide from './WelcomeSlide';
 import CurrentSlide from './CurrentSlide';
-import Logo from '../styles/images/logo.png';
-import Profile from '../styles/images/profile.png';
+import Logo from '../assets/images/logo.png';
+import Profile from '../assets/images/profile.png';
 import {
   AppWrapper,
   PresentationWrapper,
@@ -68,13 +68,13 @@ const slidesNavigationData = [
   },
   {
     slide: 10,
-    topic: 'Thank you Tanmai',
+    topic: 'Thank you Tanmai :)',
   },
 ];
 
 // ********************************************* //
 
-const Lastnamearya = () => (
+const MySlide = () => (
   <AboutMe>
     <img src={Profile} alt="lastnamearya" />
     <h3>Jigyasu Arya</h3>
@@ -154,7 +154,7 @@ const App = () => (
               )}
             </ActiveSlideWrapper>
             <SlidesNavigationSection>
-              <Lastnamearya />
+              <MySlide />
               <SlidesWrapper>
                 <SlidesDiv>
                   {slidesNavigationData.map(({ slide, topic }, index) => (

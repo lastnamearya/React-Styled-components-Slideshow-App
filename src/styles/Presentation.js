@@ -268,8 +268,15 @@ export const ActiveSlideDiv = styled.div`
   align-items: center;
 
   h1 {
-    ${'' /* text-align: center; */}
     border-bottom: 3.5px solid #cc6a87;
     padding: 0 12px 5px;
+  }
+
+  ${'' /* Last Slide Img */}
+
+  #last_slide {
+    margin-top: 10px;
+    border: 6px solid #fff;
+    box-shadow: rgba(20, 20, 20, 0.27) 1px 1px 20px;
   }
 `;

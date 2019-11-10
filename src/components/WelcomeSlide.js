@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Shahidh from '../styles/images/shahidh.png';
-import Rajoshi from '../styles/images/rajoshi.png';
-import Rishi from '../styles/images/rishi.png';
-import Tanmai from '../styles/images/tanmai.png';
-import Rikin from '../styles/images/rikin.png';
-import Karthik from '../styles/images/karthik.png';
-import Hasura from '../styles/images/hasura.png';
+import Shahidh from '../assets/images/shahidh.png';
+import Rajoshi from '../assets/images/rajoshi.png';
+import Rishi from '../assets/images/rishi.png';
+import Tanmai from '../assets/images/tanmai.png';
+import Rikin from '../assets/images/rikin.png';
+import Karthik from '../assets/images/karthik.png';
+import Hasura from '../assets/images/hasura.png';
 
 import { WelcomeWrapper, WelcomeDiv, TeamMember } from '../styles/Presentation';
 
