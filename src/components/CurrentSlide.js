@@ -20,6 +20,8 @@ import defaultThemeThree from '../assets/images/theme/default3.png';
 import whiteOne from '../assets/images/theme/white1.png';
 import whiteTwo from '../assets/images/theme/white2.png';
 import whiteThree from '../assets/images/theme/white3.png';
+import globalStyle from '../assets/images/globalStyle.png';
+import css from '../assets/images/css.png';
 
 // ********************************************* //
 
@@ -60,9 +62,9 @@ const mainSlidesData = [
     componentName: 'example',
   },
   {
-    topic: 'Helpers in Styled-Components: Global Styles',
+    topic: 'Helper Functions in Styled-Components',
     id: 7,
-    componentName: 'example',
+    componentName: 'helper',
   },
   {
     topic: 'CSS-in-Js: Other Libraries',
@@ -160,11 +162,23 @@ const Theming = () => (
   </SlideContent>
 );
 
+// 8. Helper Functions
+
+const Helper = () => (
+  <SlideContent>
+    <h2>createGlobalStyle, css function etc</h2>
+    <SlideImage src={globalStyle} alt="Global Styles" />
+    <p>We can import this GlobalStyle Component anywhere in our application</p>
+    <SlideImage src={css} alt="CSS Function" />
+    <p>Use Case: When for a single prop, You want to apply multiple styles</p>
+  </SlideContent>
+);
+
 // 9. Other Libraries
 
 const OtherLibraries = () => (
   <SlideContent>
-    <SlideImage src={fb} alt="Facebook CSS-in-Js" />
+    <SlideImage src={fb} alt="Facebook CSS-in-Js" rounded />
     <p>
       React Team built a new CSS-in-Js Library for the new Facebook{' '}
       <span role="img" aria-label="play">
@@ -201,6 +215,7 @@ const DeveloperExperience = () => (
       <li>Faster Prototyping & Better Dynamic Predictablity</li>
       <li>Great Readability ~ Component Structure</li>
       <li>Coloacted within the same React Component File</li>
+      <li>It's getting better and more performant with newer versions</li>
       <li>In then end It felt like a home for a React.js Developer</li>
     </ul>
     <SlideImage src={sid} alt="Sid" rounded />
@@ -231,6 +246,7 @@ const ActiveSlide = ({ componentName }) => {
     overview: Overview,
     theming: Theming,
     other: OtherLibraries,
+    helper: Helper,
     developerExperience: DeveloperExperience,
     lastSlide: LastSlide,
   };

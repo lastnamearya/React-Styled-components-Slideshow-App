@@ -56,7 +56,7 @@ const slidesNavigationData = [
   },
   {
     slide: 7,
-    topic: 'Global Styles',
+    topic: 'Helper Functions',
   },
   {
     slide: 8,
