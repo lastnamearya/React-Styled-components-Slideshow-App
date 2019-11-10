@@ -20,8 +20,10 @@ import defaultThemeThree from '../assets/images/theme/default3.png';
 import whiteOne from '../assets/images/theme/white1.png';
 import whiteTwo from '../assets/images/theme/white2.png';
 import whiteThree from '../assets/images/theme/white3.png';
+
 import globalStyle from '../assets/images/globalStyle.png';
 import css from '../assets/images/css.png';
+import extending from '../assets/images/extending.png';
 
 // ********************************************* //
 
@@ -57,9 +59,9 @@ const mainSlidesData = [
     componentName: 'example',
   },
   {
-    topic: 'Extensible Styling Systems: Extending Styles',
+    topic: 'Extending Styles with Styled-Components',
     id: 6,
-    componentName: 'example',
+    componentName: 'extensible',
   },
   {
     topic: 'Helper Functions in Styled-Components',
@@ -126,6 +128,16 @@ const Overview = () => (
       <li>Easier Learning Curve</li>
     </ul>
     <SlideImage src={install} alt="Install" />
+    <p>
+      Other good references:{'  '}
+      <a
+        href="https://github.com/styled-components/awesome-styled-components"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Github ~ awesome-styled-components
+      </a>
+    </p>
   </SlideContent>
 );
 
@@ -159,6 +171,22 @@ const Theming = () => (
     <SlideImage src={whiteOne} alt="img" width="60%" />
     <SlideImage src={whiteTwo} alt="img" width="60%" />
     <SlideImage src={whiteThree} alt="img" width="60%" />
+  </SlideContent>
+);
+
+// 7. Extending Styles
+
+const ExtensibleSystem = () => (
+  <SlideContent>
+    <h2>Design System: A food for thought</h2>
+    <ul>
+      <li>First of all, I dont' use that feature much even it has lot of powers</li>
+      <li>When Product Design is completely clear and you're aware of whole PRD</li>
+      <li>Automate Frontend Workflow for future</li>
+      <li>Powerful abstraction with passing props feature</li>
+    </ul>
+    <SlideImage src={extending} alt="Extending Styled Component" />
+    <p>A very simple example of extending styles using Styled Components</p>
   </SlideContent>
 );
 
@@ -245,15 +273,16 @@ const ActiveSlide = ({ componentName }) => {
     experience: Experience,
     overview: Overview,
     theming: Theming,
+    extensible: ExtensibleSystem,
     other: OtherLibraries,
     helper: Helper,
     developerExperience: DeveloperExperience,
     lastSlide: LastSlide,
   };
 
-  const TagName = components[componentName];
+  const SlideName = components[componentName];
 
-  return <TagName />;
+  return <SlideName />;
 };
 
 // ********************************************* //
