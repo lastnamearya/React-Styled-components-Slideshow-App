@@ -27,6 +27,11 @@ export const PresentationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+
+  @media only screen and (min-device-width: 1600px) {
+    width: 80%;
+    margin: 50px 10% 100px;
+  }
 `;
 
 export const SlidesNavigationSection = styled.div`
@@ -271,12 +276,13 @@ export const ActiveSlideDiv = styled.div`
     border-bottom: 3.5px solid #cc6a87;
     padding: 0 12px 5px;
   }
+`;
 
-  ${'' /* Last Slide Img */}
+// Images embedded in Slides
 
-  #last_slide {
-    margin-top: 10px;
-    border: 6px solid #fff;
-    box-shadow: rgba(20, 20, 20, 0.27) 1px 1px 20px;
-  }
+export const SlideImage = styled.img`
+  margin-top: 10px;
+  border: 6px solid #fff;
+  box-shadow: rgba(20, 20, 20, 0.27) 1px 1px 20px;
+  border-radius: ${({ rounded }) => rounded && '13px'};
 `;

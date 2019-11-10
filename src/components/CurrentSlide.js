@@ -1,13 +1,20 @@
 import React from 'react';
 
-import { ActiveSlideDiv } from '../styles/Presentation';
+import { ActiveSlideDiv, SlideImage } from '../styles/Presentation';
 import tweet from '../assets/images/sahil.png';
+import experience from '../assets/images/experience.png';
 
 // ********************************************* //
 
 const Test = () => <p>Test</p>;
 
-const LastSlide = () => <img src={tweet} alt="Sahil Lavinga" id="last_slide" />;
+// 2. My Experiece Slide
+
+const Experience = () => <SlideImage src={experience} alt="My Experience" />;
+
+// 11. Last Slide
+
+const LastSlide = () => <SlideImage src={tweet} alt="Sahil Lavinga" rounded />;
 
 // ********************************************* //
 
@@ -18,12 +25,12 @@ const mainSlidesData = [
     componentName: 'example',
   },
   {
-    topic: 'Styled-Components',
+    topic: 'How I started with Styled-Components',
     id: 1,
-    componentName: 'example',
+    componentName: 'experience',
   },
   {
-    topic: 'How I started with Styled-Components',
+    topic: 'Styled-Components',
     id: 2,
     componentName: 'example',
   },
@@ -74,6 +81,7 @@ const mainSlidesData = [
 const ActiveSlide = ({ componentName }) => {
   const components = {
     example: Test,
+    experience: Experience,
     lastSlide: LastSlide,
   };
 

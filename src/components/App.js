@@ -32,11 +32,11 @@ const slidesNavigationData = [
   },
   {
     slide: 1,
-    topic: 'Styled-Components',
+    topic: 'My experience with CSS-in-Js',
   },
   {
     slide: 2,
-    topic: 'My experience with CSS-in-Js',
+    topic: 'Styled-Components',
   },
   {
     slide: 3,
