@@ -118,7 +118,9 @@ const Overview = () => (
       <li>Easier to install with no dev setup</li>
       <li>Babel Plugin to Support SSR, Smaller Bundles etc</li>
       <li>Theming Support</li>
-      <li>Supports writing CSS in Styled Component</li>
+      <li>Supports writing CSS in a Styled Component ~ id / className</li>
+      <li>Scoped Styling ~ No more use of Pre-Processors like SASS</li>
+      <li>No className conflicts ~ Supports Global CSS</li>
       <li>Easier Learning Curve</li>
     </ul>
     <SlideImage src={install} alt="Install" />
@@ -187,6 +189,20 @@ const OtherLibraries = () => (
 
 const DeveloperExperience = () => (
   <SlideContent>
+    <h2>
+      <span role="img" aria-label="play">
+        🔥
+      </span>
+    </h2>
+    <ul>
+      <li>Ability to write CSS-in-Js gives a huge Productivity Boost</li>
+      <li>Critical CSS Styling ~ No more procrastination and lesser resistence</li>
+      <li>Powerful Abstractions ~ Design Systems</li>
+      <li>Faster Prototyping & Better Dynamic Predictablity</li>
+      <li>Great Readability ~ Component Structure</li>
+      <li>Coloacted within the same React Component File</li>
+      <li>In then end It felt like a home for a React.js Developer</li>
+    </ul>
     <SlideImage src={sid} alt="Sid" rounded />
     <p>A new trick that I recenlty learned by Sid</p>
   </SlideContent>
