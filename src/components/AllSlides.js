@@ -12,6 +12,8 @@ import tailwind from '../assets/images/tailwind.png';
 import globalStyle from '../assets/images/globalStyle.png';
 import css from '../assets/images/css.png';
 import extending from '../assets/images/extending.png';
+import console from '../assets/images/dev_console.png';
+import slideImages from '../assets/images/slideImages.png';
 
 // Theme Images
 
@@ -88,6 +90,19 @@ export const Overview = () => (
   </SlideContent>
 );
 
+// 4. Styled Components ~ Work
+
+export const Workflow = () => (
+  <SlideContent>
+    <h2>Styled-components utilises tagged template literals to style components</h2>
+    <SlideImage src={console} alt="console" width="80%" />
+    <p>
+      When we create a Styled Component then it really just returning an element with a class i.e
+      complete unique and also generates css for that class.
+    </p>
+  </SlideContent>
+);
+
 // 5. Theming in Styled-Components
 
 export const Theming = () => (
@@ -128,7 +143,7 @@ export const PropsSlide = () => (
     <h2>The Right Abstraction</h2>
     <ul>
       <li>This is where all React.js developer productivity lives :P</li>
-      <li>Writing critical CSS is now no more a procrastinating thought :D</li>
+      <li>80 / 20 Principle ~ Writing critical CSS is now no more a procrastinating thought :D</li>
       <li>Being able to manipulate styles based on specific conditions</li>
       <li>CSS is now easier to maintain</li>
     </ul>
@@ -140,6 +155,8 @@ export const PropsSlide = () => (
     <p>First Welcome Slide ~ Dynamic align-self property based on index</p>
     <SlideImage src={hasuraButtons} alt="Grid" rounded />
     <p>New UI of Hasura ~ Same Button Styling abstraction</p>
+    <SlideImage src={slideImages} alt="Slide Images" />
+    <p>Images embedded in Slides</p>
   </SlideContent>
 );
 

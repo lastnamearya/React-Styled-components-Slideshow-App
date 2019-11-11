@@ -4,6 +4,7 @@ import {
   Test,
   Experience,
   Overview,
+  Workflow,
   Theming,
   ExtensibleSystem,
   PropsSlide,
@@ -20,6 +21,7 @@ const ActiveSlide = ({ componentName }) => {
     example: Test,
     experience: Experience,
     overview: Overview,
+    workflow: Workflow,
     theming: Theming,
     extensible: ExtensibleSystem,
     propsSlide: PropsSlide,
@@ -74,7 +76,7 @@ const mainSlidesData = [
   {
     topic: 'How Styled-Components works behind the scenes',
     id: 3,
-    componentName: 'example',
+    componentName: 'workflow',
   },
   {
     topic: 'Theming: Creating Themes with Styled-Components',
