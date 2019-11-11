@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActiveSlideDiv } from '../styles/Presentation';
 import {
-  Test,
+  FirstSlide,
   Experience,
   Overview,
   Workflow,
@@ -18,7 +18,7 @@ import {
 
 const ActiveSlide = ({ componentName }) => {
   const components = {
-    example: Test,
+    firstSlide: FirstSlide,
     experience: Experience,
     overview: Overview,
     workflow: Workflow,
@@ -61,7 +61,7 @@ const mainSlidesData = [
   {
     topic: 'Introduction to CSS-in-Js',
     id: 0,
-    componentName: 'example',
+    componentName: 'firstSlide',
   },
   {
     topic: 'How I started with Styled-Components',

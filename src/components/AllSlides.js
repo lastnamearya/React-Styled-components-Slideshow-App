@@ -8,7 +8,6 @@ import stats from '../assets/images/stats.png';
 import fb from '../assets/images/fb.png';
 import otherLibraries from '../assets/images/otherLib.png';
 import sid from '../assets/images/sid.png';
-import tailwind from '../assets/images/tailwind.png';
 import globalStyle from '../assets/images/globalStyle.png';
 import css from '../assets/images/css.png';
 import extending from '../assets/images/extending.png';
@@ -36,7 +35,35 @@ import hasuraButtons from '../assets/images/props/hasuraNewUI.png';
 
 // ********************************************* //
 
-export const Test = () => <p>Test</p>;
+export const FirstSlide = () => (
+  <SlideContent>
+    <h2>The Basics</h2>
+    <ul>
+      <li>
+        "CSS-in-Js" refers to a pattern where CSS is composed using JavaScript instead of defined in
+        external files
+      </li>
+      <li>
+        Give us power to write Frontend Styling in a way that is a function of Component State ~
+        f(state)
+      </li>
+      <li>CSS in JS brings CSS into the component era</li>
+      <li>
+        A more powerful CSS ~ Tries to solve all old CSS problems with JavaScript styling solution
+      </li>
+    </ul>
+    <p>
+      Recommendation ~{'  '}
+      <a
+        href="https://2019.stateofcss.com/technologies/css-in-js/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        State of CSS in 2019
+      </a>
+    </p>
+  </SlideContent>
+);
 
 // 2. My Personal Experiece
 
@@ -49,8 +76,8 @@ export const Experience = () => (
     </ul>
     <SlideImage src={experience} alt="My Experience" />
     <p>
-      Me right after two weeks of working with Styled-Components ~ Sharing my experience with my
-      teammates in Slack{' '}
+      Me right after first two weeks of working with Styled-Components ~ Sharing my experience with
+      my teammates in Slack{' '}
       <span role="img" aria-label="play">
         😀
       </span>
@@ -74,6 +101,7 @@ export const Overview = () => (
       <li>Supports writing CSS in a Styled Component ~ id / className</li>
       <li>Scoped Styling ~ No more use of Pre-Processors like SASS</li>
       <li>No className conflicts ~ Supports Global CSS</li>
+      <li>No unexpected styling behaviour</li>
       <li>Easier Learning Curve</li>
     </ul>
     <SlideImage src={install} alt="Install" />
@@ -142,7 +170,7 @@ export const PropsSlide = () => (
   <SlideContent>
     <h2>The Right Abstraction</h2>
     <ul>
-      <li>This is where all React.js developer productivity lives :P</li>
+      <li>This is where all React.js Developer productivity lives :P</li>
       <li>80 / 20 Principle ~ Writing critical CSS is now no more a procrastinating thought :D</li>
       <li>Being able to manipulate styles based on specific conditions</li>
       <li>CSS is now easier to maintain</li>
@@ -233,9 +261,7 @@ export const DeveloperExperience = () => (
       <li>In the end, It felt like a home for a React.js Developer</li>
     </ul>
     <SlideImage src={sid} alt="Sid" rounded />
-    <p>A new neat trick that I recenlty learned</p>
-    <SlideImage src={tailwind} alt="tailwind" width="90%" />
-    <p>Tailwind CSS is all over the Twitter, I'll also give it a try</p>
+    <p>A new neat trick that I recenlty learned worth sharing.</p>
   </SlideContent>
 );
 
