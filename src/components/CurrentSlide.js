@@ -8,6 +8,10 @@ import stats from '../assets/images/stats.png';
 import fb from '../assets/images/fb.png';
 import otherLibraries from '../assets/images/otherLib.png';
 import sid from '../assets/images/sid.png';
+import tailwind from '../assets/images/tailwind.png';
+import globalStyle from '../assets/images/globalStyle.png';
+import css from '../assets/images/css.png';
+import extending from '../assets/images/extending.png';
 
 // Theme Images
 
@@ -21,9 +25,12 @@ import whiteOne from '../assets/images/theme/white1.png';
 import whiteTwo from '../assets/images/theme/white2.png';
 import whiteThree from '../assets/images/theme/white3.png';
 
-import globalStyle from '../assets/images/globalStyle.png';
-import css from '../assets/images/css.png';
-import extending from '../assets/images/extending.png';
+// Props ~ Critical CSS
+
+import tictactoeGrid from '../assets/images/props/tictactoeGrid.png';
+import tictactoeCode from '../assets/images/props/tictactoe.png';
+import welcomeSlide from '../assets/images/props/welcomeslide.png';
+import hasuraButtons from '../assets/images/props/hasuraNewUI.png';
 
 // ********************************************* //
 
@@ -56,7 +63,7 @@ const mainSlidesData = [
   {
     topic: 'Props: The real power of Styled-Components',
     id: 5,
-    componentName: 'example',
+    componentName: 'propsSlide',
   },
   {
     topic: 'Extending Styles with Styled-Components',
@@ -174,6 +181,28 @@ const Theming = () => (
   </SlideContent>
 );
 
+// 6. Props in Styled Components
+
+const PropsSlide = () => (
+  <SlideContent>
+    <h2>The Right Abstraction</h2>
+    <ul>
+      <li>This is where all React.js developer productivity lives :P</li>
+      <li>Writing critical CSS is now no more a procrastinating thought :D</li>
+      <li>Being able to manipulate styles based on specific conditions</li>
+      <li>CSS is now easier to maintain</li>
+    </ul>
+    <SlideImage src={tictactoeGrid} alt="Grid" rounded />
+    <p>React.js Tic-Tac-Toe Dynamic Grids</p>
+    <SlideImage src={tictactoeCode} alt="Grid" />
+    <p>That's how I'm generating GridsDiv width based on user grid input</p>
+    <SlideImage src={welcomeSlide} alt="Grid" />
+    <p>First Welcome Slide ~ Dynamic align-self property based on index</p>
+    <SlideImage src={hasuraButtons} alt="Grid" rounded />
+    <p>New UI of Hasura ~ Same Button Styling abstraction</p>
+  </SlideContent>
+);
+
 // 7. Extending Styles
 
 const ExtensibleSystem = () => (
@@ -244,10 +273,12 @@ const DeveloperExperience = () => (
       <li>Great Readability ~ Component Structure</li>
       <li>Coloacted within the same React Component File</li>
       <li>It's getting better and more performant with newer versions</li>
-      <li>In then end It felt like a home for a React.js Developer</li>
+      <li>In the end, It felt like a home for a React.js Developer</li>
     </ul>
     <SlideImage src={sid} alt="Sid" rounded />
-    <p>A new trick that I recenlty learned by Sid</p>
+    <p>A new neat trick that I recenlty learned</p>
+    <SlideImage src={tailwind} alt="tailwind" width="90%" />
+    <p>Tailwind CSS is all over the Twitter, I'll also give it a try</p>
   </SlideContent>
 );
 
@@ -274,6 +305,7 @@ const ActiveSlide = ({ componentName }) => {
     overview: Overview,
     theming: Theming,
     extensible: ExtensibleSystem,
+    propsSlide: PropsSlide,
     other: OtherLibraries,
     helper: Helper,
     developerExperience: DeveloperExperience,

@@ -250,8 +250,9 @@ export const TeamMember = styled.img`
   border-radius: 50%;
   margin-right: 20px;
   cursor: pointer;
-  align-self: ${({ index }) => (index % 2 === 0 ? 'flex-start' : 'flex-end')};
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+
+  align-self: ${({ index }) => (index % 2 === 0 ? 'flex-start' : 'flex-end')};
 
   :hover {
     transform: scale(1.1);
