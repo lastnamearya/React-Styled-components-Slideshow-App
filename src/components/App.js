@@ -1,4 +1,5 @@
 import React from 'react';
+import TagManager from 'react-gtm-module';
 import GlobalStyles from '../styles/GlobalStyles';
 import { FaHome, FaReact, FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
@@ -126,63 +127,79 @@ const MySlide = () => (
 );
 
 // ********************************************* //
+// Google Tag ID
 
-const App = () => (
-  <StoreProvider>
-    <StoreConsumer>
-      {({ isWelcomeSlideActive, currentActiveSlide, changeCurrentActiveSlide }) => (
-        <AppWrapper>
-          <img src={Logo} alt="styled-components" id="logo" />
-          <iframe
-            src="https://ghbtns.com/github-btn.html?user=styled-components&repo=styled-components&type=star&count=true"
-            frameBorder="0"
-            scrolling="0"
-            width="170px"
-            height="20px"
-            title="styled-components"
-          ></iframe>
-          <PresentationWrapper>
-            <GlobalStyles />
-            {/* Active Slide */}
-            <ActiveSlideWrapper>
-              {isWelcomeSlideActive ? (
-                <WelcomeSlide />
-              ) : (
-                <CurrentSlide currentActiveSlide={currentActiveSlide} />
-              )}
-            </ActiveSlideWrapper>
-            <SlidesNavigationSection>
-              <MySlide />
-              <SlidesWrapper>
-                <SlidesDiv>
-                  {slidesNavigationData.map(({ slide, topic }, index) => (
-                    <Slide
-                      key={slide}
-                      active={index === currentActiveSlide && true}
-                      onClick={() => {
-                        window.scrollTo({ top: 200, behavior: 'smooth' });
-                        changeCurrentActiveSlide(index);
-                      }}
-                    >
-                      <p>{`${index + 1}. Slide`}</p>
-                      <SlideTopic>
-                        <h2>{topic}</h2>
-                        <img src={Logo} alt="styled-components" />
-                      </SlideTopic>
-                      <footer>
-                        <FootPrint src={Profile} alt="lastnamearya" />
-                        <p>lastnamearya</p>
-                      </footer>
-                    </Slide>
-                  ))}
-                </SlidesDiv>
-              </SlidesWrapper>
-            </SlidesNavigationSection>
-          </PresentationWrapper>
-        </AppWrapper>
-      )}
-    </StoreConsumer>
-  </StoreProvider>
-);
+const tagManagerArgs = {
+  gtmId: 'UA-152753600-1',
+};
+
+// ******************************************* //
+
+class App extends React.Component {
+  componentDidMount() {
+    // Google Adsense
+    TagManager.initialize(tagManagerArgs);
+  }
+
+  render() {
+    return (
+      <StoreProvider>
+        <StoreConsumer>
+          {({ isWelcomeSlideActive, currentActiveSlide, changeCurrentActiveSlide }) => (
+            <AppWrapper>
+              <img src={Logo} alt="styled-components" id="logo" />
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=styled-components&repo=styled-components&type=star&count=true"
+                frameBorder="0"
+                scrolling="0"
+                width="170px"
+                height="20px"
+                title="styled-components"
+              ></iframe>
+              <PresentationWrapper>
+                <GlobalStyles />
+                {/* Active Slide */}
+                <ActiveSlideWrapper>
+                  {isWelcomeSlideActive ? (
+                    <WelcomeSlide />
+                  ) : (
+                    <CurrentSlide currentActiveSlide={currentActiveSlide} />
+                  )}
+                </ActiveSlideWrapper>
+                <SlidesNavigationSection>
+                  <MySlide />
+                  <SlidesWrapper>
+                    <SlidesDiv>
+                      {slidesNavigationData.map(({ slide, topic }, index) => (
+                        <Slide
+                          key={slide}
+                          active={index === currentActiveSlide && true}
+                          onClick={() => {
+                            window.scrollTo({ top: 200, behavior: 'smooth' });
+                            changeCurrentActiveSlide(index);
+                          }}
+                        >
+                          <p>{`${index + 1}. Slide`}</p>
+                          <SlideTopic>
+                            <h2>{topic}</h2>
+                            <img src={Logo} alt="styled-components" />
+                          </SlideTopic>
+                          <footer>
+                            <FootPrint src={Profile} alt="lastnamearya" />
+                            <p>lastnamearya</p>
+                          </footer>
+                        </Slide>
+                      ))}
+                    </SlidesDiv>
+                  </SlidesWrapper>
+                </SlidesNavigationSection>
+              </PresentationWrapper>
+            </AppWrapper>
+          )}
+        </StoreConsumer>
+      </StoreProvider>
+    );
+  }
+}
 
 export default App;
